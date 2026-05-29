@@ -115,7 +115,9 @@
 }
 
 /* Texto about */
-.about__content { }
+.about__content {
+  max-width: 520px;
+}
 
 .about__label {
   font-family: var(--font-mono);
