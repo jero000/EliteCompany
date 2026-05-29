@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Elite Company — Agencia especializada en soluciones web y gestión de comunidades digitales en Colombia." />
+  <title>Elite Company — Soluciones Web & Community Manager</title>
+
+  <!-- SEO / Social -->
+  <meta property="og:site_name" content="Elite Company" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elite Company — Soluciones Web & Community Manager" />
+  <meta property="og:description" content="Diseñamos experiencias web de alto impacto y gestionamos comunidades digitales que conectan marcas con personas de forma auténtica." />
+  <meta property="og:image" content="assets/social-preview.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elite Company — Soluciones Web & Community Manager" />
+  <meta name="twitter:description" content="Diseñamos experiencias web de alto impacto y gestionamos comunidades digitales que conectan marcas con personas de forma auténtica." />
+  <meta name="twitter:image" content="assets/social-preview.svg" />
+  <meta name="theme-color" content="#0b0b0d" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preload" as="image" href="assets/logo-elite.webp" type="image/webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="variables.css" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="sections.css" />
+  <link rel="stylesheet" href="cards.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="assets/brand-enhancements.css" />
+  <!-- Critical roles & accessibility -->
+</head>
+<body>
+
+  <div class="brand-transition" id="brandTransition" aria-hidden="true">
+    <video class="brand-transition__video" id="brandTransitionVideo" autoplay muted playsinline preload="metadata" poster="assets/logo-512.png">
+      <source src="VideoTransicionEliteCompany.MP4" type="video/mp4" />
+    </video>
+    <div class="brand-transition__veil"></div>
+    <picture>
+      <source srcset="assets/logo-elite.webp" type="image/webp" />
+      <img src="LogoEliteCompany.JPG" alt="Elite Company" class="brand-transition__logo" width="180" height="180" decoding="async" />
+    </picture>
+    <button type="button" class="brand-transition__skip" id="skipIntro" aria-label="Saltar introducción">Saltar intro</button>
+  </div>
+
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main Navigation">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__logo">
+        <div class="nav__logo-mark">
+          <picture>
+            <source srcset="assets/logo-elite.webp" type="image/webp" />
+            <img src="LogoEliteCompany.JPG" alt="Logo Elite Company" class="nav__logo-img" width="52" height="52" />
+          </picture>
+          <span>E</span>
+        </div>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">Elite</span>
+          <span class="nav__logo-sub">Company</span>
+        </div>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+      </ul>
+
+      <a href="#contacto" class="nav__cta">Cotizar proyecto</a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a>
+    <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
+    <a href="#portafolio" onclick="closeMobileMenu()">Portafolio</a>
+    <a href="#clientes" onclick="closeMobileMenu()">Clientes</a>
+    <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
+  </div>
+
+  <main role="main">
+    <section class="hero" id="inicio">
+      <div class="hero__bg">
+        <div class="hero__bg-gradient"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="hero__orb"></div>
+
+      <div class="hero__content">
+        <span class="hero__eyebrow">
+          <span class="hero__eyebrow-line"></span>
+          Agencia Digital en Colombia
+        </span>
+
+        <h1 class="hero__title">
+          Elevamos tu marca<br>
+          <em>al siguiente nivel</em>
+          <strong> digital.</strong>
+        </h1>
+
+        <p class="hero__subtitle">
+          Diseñamos experiencias web de alto impacto y gestionamos comunidades digitales que conectan marcas con personas de forma auténtica.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#contacto" class="btn btn--gold">Iniciar proyecto</a>
+          <a href="#portafolio" class="btn btn--outline">Ver portafolio</a>
+        </div>
+
+        <div class="hero__trust">
+          <div class="hero__trust-item">
+            <span class="hero__trust-num">+80</span>
+            <span class="hero__trust-label">Clientes activos</span>
+          </div>
+          <span class="hero__trust-sep"></span>
+          <div class="hero__trust-item">
+            <span class="hero__trust-num">5+</span>
+            <span class="hero__trust-label">Años de experiencia</span>
+          </div>
+          <span class="hero__trust-sep"></span>
+          <div class="hero__trust-item">
+            <span class="hero__trust-num">98%</span>
+            <span class="hero__trust-label">Satisfacción</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__visual" data-aos>
+            <div class="about__frame">
+              <div class="about__frame-inner">
+                <div class="about__frame-icon">✦</div>
+                <p class="about__frame-text">
+                  Donde la <em>estrategia</em><br>
+                  se convierte en resultado.
+                </p>
+              </div>
+              <div class="about__corner about__corner--tl"></div>
+              <div class="about__corner about__corner--tr"></div>
+              <div class="about__corner about__corner--bl"></div>
+              <div class="about__corner about__corner--br"></div>
+            </div>
+
+            <div class="about__badge">
+              <span class="about__badge-num">5+</span>
+              <span class="about__badge-label">Años de<br>experiencia</span>
+            </div>
+          </div>
+
+          <div class="about__content" data-aos>
+            <div class="about__label">Quiénes somos</div>
+
+            <h2 class="about__title">
+              Somos tu aliado<br>
+              <em>estratégico</em> digital
+            </h2>
+
+            <p class="about__text">
+              En <strong>Elite Company</strong> combinamos creatividad, tecnología y estrategia para construir presencias digitales que generan resultados reales. Somos un equipo apasionado con sede en Colombia, especializado en soluciones web y gestión de comunidades.
+            </p>
+
+            <p class="about__text">
+              Creemos que cada empresa merece una presencia digital de clase mundial, sin importar su tamaño. Por eso ofrecemos servicios personalizados con el compromiso y la calidad que tu negocio requiere.
+            </p>
+
+            <div class="about__values">
+              <div class="about__value-item">
+                <div class="about__value-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2"/></svg>
+                </div>
+                <div class="about__value-title">Orientados a resultados</div>
+                <div class="about__value-desc">Cada decisión se basa en datos y métricas concretas.</div>
+              </div>
+              <div class="about__value-item">
+                <div class="about__value-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M8.4 14.2A6 6 0 1 1 16 14.2c-.8.8-1.2 1.5-1.3 2.3H9.8c-.1-.8-.5-1.5-1.4-2.3Z"/></svg>
+                </div>
+                <div class="about__value-title">Creatividad estratégica</div>
+                <div class="about__value-desc">Ideas innovadoras con propósito y dirección clara.</div>
+              </div>
+              <div class="about__value-item">
+                <div class="about__value-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><path d="M8 11 5.8 8.8a2 2 0 0 0-2.8 2.8L5.2 14"/><path d="M16 11 18.2 8.8a2 2 0 0 1 2.8 2.8L18.8 14"/><path d="m8 11 2.2 2.2a2 2 0 0 0 2.8 0L16 11"/><path d="M5.2 14 8 16.8M18.8 14 16 16.8"/></svg>
+                </div>
+                <div class="about__value-title">Alianza real</div>
+                <div class="about__value-desc">Somos parte de tu equipo, no solo proveedores.</div>
+              </div>
+              <div class="about__value-item">
+                <div class="about__value-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><path d="M13 2 5 14h6l-1 8 9-13h-6l1-7Z"/></svg>
+                </div>
+                <div class="about__value-title">Agilidad y entrega</div>
+                <div class="about__value-desc">Cumplimos tiempos sin sacrificar la calidad.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Lo que ofrecemos</span>
+          <h2 class="section-title">Nuestros <em>Servicios</em></h2>
+          <p class="section-desc">Diseñamos experiencias digitales que conectan marcas con personas de manera auténtica y efectiva.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" data-aos>
+            <div class="service-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.4 2.5 14.6 0 18M12 3c-2.5 2.4-2.5 14.6 0 18"/></svg>
+            </div>
+            <h3>Diseño Web Profesional</h3>
+            <p>Creamos sitios web de alto impacto que convierten visitantes en clientes. Diseño moderno, rápido y orientado a resultados.</p>
+            <ul class="service-features">
+              <li>Landing pages de alta conversión</li>
+              <li>Sitios corporativos y catálogos</li>
+              <li>Diseño responsive y accesible</li>
+              <li>Optimización de velocidad (Core Web Vitals)</li>
+            </ul>
+          </div>
+          <div class="service-card" data-aos>
+            <div class="service-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="10" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M3 4h2l2.1 10.2a1 1 0 0 0 1 .8h9.9a1 1 0 0 0 1-.8L21 7H7"/></svg>
+            </div>
+            <h3>Tiendas en Línea</h3>
+            <p>Desarrollamos e-commerce robustos con experiencias de compra fluidas, integración de pagos y gestión de inventario.</p>
+            <ul class="service-features">
+              <li>WooCommerce y Shopify</li>
+              <li>Pasarelas de pago colombianas</li>
+              <li>Panel de administración intuitivo</li>
+              <li>Recuperación de carritos abandonados</li>
+            </ul>
+          </div>
+          <div class="service-card" data-aos>
+            <div class="service-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>
+            </div>
+            <h3>Community Manager</h3>
+            <p>Gestionamos tu presencia en redes sociales con estrategia, creatividad y métricas claras que impulsan tu marca.</p>
+            <ul class="service-features">
+              <li>Gestión de Instagram, Facebook y TikTok</li>
+              <li>Creación de contenido visual y copywriting</li>
+              <li>Pauta publicitaria con Meta Ads</li>
+              <li>Reportes mensuales de desempeño</li>
+            </ul>
+          </div>
+          <div class="service-card" data-aos>
+            <div class="service-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            </div>
+            <h3>SEO & Posicionamiento</h3>
+            <p>Posicionamos tu negocio en los primeros resultados de Google con estrategias orgánicas sostenibles y medibles.</p>
+            <ul class="service-features">
+              <li>Auditoría SEO completa</li>
+              <li>Optimización on-page y técnica</li>
+              <li>Linkbuilding y autoridad de dominio</li>
+              <li>SEO local para negocios colombianos</li>
+            </ul>
+          </div>
+          <div class="service-card" data-aos>
+            <div class="service-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 0 16h1.2a2.8 2.8 0 0 0 0-5.6H12a2 2 0 0 1 0-4h5a3 3 0 0 0 0-6z"/><circle cx="7.8" cy="10" r="1"/><circle cx="9.8" cy="7.4" r="1"/><circle cx="13" cy="6.8" r="1"/></svg>
+            </div>
+            <h3>Branding & Identidad</h3>
+            <p>Construimos la identidad visual de tu marca desde cero o la renovamos para que destaque en todos los canales digitales.</p>
+            <ul class="service-features">
+              <li>Diseño de logo y manual de marca</li>
+              <li>Paleta de colores y tipografía</li>
+              <li>Plantillas para redes sociales</li>
+              <li>Material corporativo digital</li>
+            </ul>
+          </div>
+          <div class="service-card" data-aos>
+            <div class="service-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20v-12"/></svg>
+            </div>
+            <h3>Analítica Digital</h3>
+            <p>Convertimos datos en decisiones inteligentes. Implementamos y analizamos métricas para maximizar el retorno de tu inversión.</p>
+            <ul class="service-features">
+              <li>Configuración de Google Analytics 4</li>
+              <li>Dashboards personalizados</li>
+              <li>Análisis de embudos de conversión</li>
+              <li>Reportes ejecutivos mensuales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="portafolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Casos de éxito</span>
+          <h2 class="section-title">Nuestro <em>Portafolio</em></h2>
+          <p class="section-desc">Proyectos que reflejan nuestra pasión por el detalle y la excelencia digital.</p>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-card" data-aos>
+            <div class="portfolio-img" style="background: linear-gradient(135deg, #1a0a00 0%, #3d1f00 50%, #5c3000 100%)">
+              <span class="portfolio-cat">Web + CM</span>
+              <div class="portfolio-overlay"><span>WordPress · Meta Ads</span></div>
+            </div>
+            <div class="portfolio-info"><h3>Restaurante La Fogata</h3><p>Diseño web y gestión de redes sociales. Incremento del 180% en reservas online en 3 meses.</p></div>
+          </div>
+          <div class="portfolio-card" data-aos>
+            <div class="portfolio-img" style="background: linear-gradient(135deg, #001a1a 0%, #003d3d 50%, #005c5c 100%)">
+              <span class="portfolio-cat">Diseño Web</span>
+              <div class="portfolio-overlay"><span>React · Node.js</span></div>
+            </div>
+            <div class="portfolio-info"><h3>Clínica DentalPro</h3><p>Rediseño web completo con agendamiento online. Reducción del 60% en llamadas de agendamiento.</p></div>
+          </div>
+          <div class="portfolio-card" data-aos>
+            <div class="portfolio-img" style="background: linear-gradient(135deg, #1a001a 0%, #3d003d 50%, #5c005c 100%)">
+              <span class="portfolio-cat">E-Commerce</span>
+              <div class="portfolio-overlay"><span>WooCommerce · PSE</span></div>
+            </div>
+            <div class="portfolio-info"><h3>Moda Éxito Store</h3><p>E-commerce de moda con integración PSE y Nequi. Más de 500 transacciones en el primer mes.</p></div>
+          </div>
+          <div class="portfolio-card" data-aos>
+            <div class="portfolio-img" style="background: linear-gradient(135deg, #0a0a00 0%, #2a2a00 50%, #444400 100%)">
+              <span class="portfolio-cat">Branding + SEO</span>
+              <div class="portfolio-overlay"><span>PHP · Figma</span></div>
+            </div>
+            <div class="portfolio-info"><h3>Constructora Élite</h3><p>Branding completo y sitio web corporativo. Posicionamiento SEO en top 3 para términos locales.</p></div>
+          </div>
+          <div class="portfolio-card" data-aos>
+            <div class="portfolio-img" style="background: linear-gradient(135deg, #001a08 0%, #003d12 50%, #005c1a 100%)">
+              <span class="portfolio-cat">Community Manager</span>
+              <div class="portfolio-overlay"><span>Meta Ads · Canva Pro</span></div>
+            </div>
+            <div class="portfolio-info"><h3>FitLife Academia</h3><p>Community Manager integral con contenido diario. Crecimiento de 12K a 48K seguidores en 6 meses.</p></div>
+          </div>
+          <div class="portfolio-card" data-aos>
+            <div class="portfolio-img" style="background: linear-gradient(135deg, #00081a 0%, #00123d 50%, #001a5c 100%)">
+              <span class="portfolio-cat">Portal Web</span>
+              <div class="portfolio-overlay"><span>Laravel · Vue.js</span></div>
+            </div>
+            <div class="portfolio-info"><h3>Agencia Travel Colombia</h3><p>Portal de turismo con motor de reservas y sistema multimoneda. Operación en 5 países.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clientes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Lo que dicen</span>
+          <h2 class="section-title">Nuestros <em>Clientes</em></h2>
+        </div>
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Elite Company transformó completamente nuestra presencia digital. En tres meses triplicamos nuestras ventas en línea. El equipo es profesional, creativo y siempre disponible."</p>
+            <div class="testimonial-author"><div class="author-avatar" style="background: #C9A84C">C</div><div><strong>Camila Torres</strong><span>CEO · Moda Éxito Store</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Nuestra página web y el manejo de redes ha sido impecable. Los resultados hablan solos: pasamos de 2.000 a 15.000 seguidores y nuestro restaurante está lleno cada fin de semana."</p>
+            <div class="testimonial-author"><div class="author-avatar" style="background: #E8866B">A</div><div><strong>Andrés Mejía</strong><span>Propietario · La Fogata</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Excelente servicio y atención personalizada. El diseño web que nos entregaron superó todas nuestras expectativas. Muy recomendados para cualquier empresa que quiera crecer digitalmente."</p>
+            <div class="testimonial-author"><div class="author-avatar" style="background: #6BC9C4">V</div><div><strong>Valentina Ospina</strong><span>Gerente · Clínica DentalPro</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"La estrategia SEO que implementaron nos llevó al top de Google en menos de 4 meses. Ahora recibimos consultas orgánicas todos los días sin gastar en pauta."</p>
+            <div class="testimonial-author"><div class="author-avatar" style="background: #A084E8">S</div><div><strong>Sebastián Ríos</strong><span>Director · Constructora Élite</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"El equipo de Elite Company entiende perfectamente el mercado colombiano. Su manejo de comunidades es auténtico y los resultados en conversión son notables."</p>
+            <div class="testimonial-author"><div class="author-avatar" style="background: #6BE87A">D</div><div><strong>Diana Cardona</strong><span>Fundadora · FitLife Academia</span></div></div>
+          </div>
+        </div>
+        <div class="testimonials-nav">
+          <button id="prevBtn" aria-label="Anterior">&#8592;</button>
+          <button id="nextBtn" aria-label="Siguiente">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" id="estadisticas">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat-item" data-aos>
+            <span class="stat-num" data-count="80">0<span class="stat-suffix">+</span></span>
+            <span class="stat-label">Clientes activos</span>
+          </div>
+          <div class="stat-item" data-aos>
+            <span class="stat-num" data-count="120">0<span class="stat-suffix">+</span></span>
+            <span class="stat-label">Proyectos entregados</span>
+          </div>
+          <div class="stat-item" data-aos>
+            <span class="stat-num" data-count="5">0<span class="stat-suffix">+</span></span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-item" data-aos>
+            <span class="stat-num" data-count="98">0<span class="stat-suffix">%</span></span>
+            <span class="stat-label">Satisfacción cliente</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info" data-aos>
+            <div class="contact__info-label">Hablemos</div>
+
+            <h2 class="contact__info-title">
+              ¿Listo para dar el<br>
+              <em>siguiente paso?</em>
+            </h2>
+
+            <p class="contact__info-text">
+              Cuéntanos sobre tu proyecto y en menos de 24 horas te respondemos con una propuesta personalizada. Sin compromisos, sin costos ocultos.
+            </p>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                </div>
+                <div class="contact__detail-info"><strong>Email</strong><span>contacto@elitecompany.co</span></div>
+              </div>
+              <div class="contact__detail">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>
+                </div>
+                <div class="contact__detail-info"><strong>WhatsApp</strong><span>+57 300 000 0000</span></div>
+              </div>
+              <div class="contact__detail">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </div>
+                <div class="contact__detail-info"><strong>Ubicación</strong><span>Medellín, Antioquia — Colombia</span></div>
+              </div>
+              <div class="contact__detail">
+                <div class="contact__detail-icon" aria-hidden="true">
+                  <svg class="ui-icon" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.8 1.6"/><path d="M9 3h6"/></svg>
+                </div>
+                <div class="contact__detail-info"><strong>Horario</strong><span>Lunes a Viernes · 8:00 am – 6:00 pm</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__form" data-aos>
+            <h3>Cuéntanos tu <em>proyecto</em></h3>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+                </div>
+                <div class="form-group">
+                  <label for="empresa">Empresa</label>
+                  <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="servicio">Servicio de interés</label>
+                <select id="servicio" name="servicio">
+                  <option value="">— Selecciona un servicio —</option>
+                  <option>Diseño Web Profesional</option>
+                  <option>Tienda en Línea (E-Commerce)</option>
+                  <option>Community Manager</option>
+                  <option>SEO y Posicionamiento</option>
+                  <option>Branding e Identidad</option>
+                  <option>Analítica Digital</option>
+                  <option>Paquete completo</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto, objetivos y presupuesto aproximado..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--gold form-submit">Enviar mensaje</button>
+              <div class="form-status" id="formStatus"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <picture>
+            <source srcset="assets/logo-elite.webp" type="image/webp" />
+            <img src="LogoEliteCompany.JPG" alt="Logo Elite Company" class="footer__brand-logo" width="68" height="68" loading="lazy" decoding="async" />
+          </picture>
+          <div class="footer__brand-name">Elite <em>Company</em></div>
+          <span class="footer__brand-tag">Soluciones Web & Community Manager</span>
+          <p class="footer__brand-desc">Transformamos negocios colombianos con estrategia digital de primer nivel. Tu éxito es nuestra razón de existir.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Instagram"><svg class="ui-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r="1"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v5h4v-5h3l1-4h-4V8a1 1 0 0 1 1-1Z"/></svg></a>
+            <a href="#" class="social-link" aria-label="TikTok"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M14 5v8.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 5c1.2 1.8 2.6 2.7 4.5 2.8"/></svg></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg class="ui-icon" viewBox="0 0 24 24"><rect x="4" y="9" width="4" height="11" rx="1"/><circle cx="6" cy="5.5" r="1.2"/><path d="M11 20V9h3v1.8c.7-1.2 1.8-2 3.5-2C20 8.8 21 10.3 21 13v7h-4v-6.4c0-1.2-.5-2-1.7-2S13 12.4 13 13.6V20z"/></svg></a>
+            <a href="#" class="social-link" aria-label="WhatsApp"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 0-6.9 12l-1 4 4-1A8 8 0 1 0 12 4Z"/><path d="M9.2 9.5c0 2.6 2.2 4.8 4.8 4.8"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__col-title">Servicios</span>
+          <ul class="footer__links">
+            <li><a href="#servicios">Diseño Web</a></li>
+            <li><a href="#servicios">E-Commerce</a></li>
+            <li><a href="#servicios">Community Manager</a></li>
+            <li><a href="#servicios">SEO & SEM</a></li>
+            <li><a href="#servicios">Branding</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__col-title">Empresa</span>
+          <ul class="footer__links">
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#clientes">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <span class="footer__col-title">Contacto</span>
+          <ul class="footer__links">
+            <li><a href="mailto:contacto@elitecompany.co">contacto@elitecompany.co</a></li>
+            <li><a href="tel:+573000000000">+57 300 000 0000</a></li>
+            <li><a href="#">Medellín, Colombia</a></li>
+            <li><a href="#">Lun–Vie: 8am–6pm</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 <em>Elite Company</em>. Todos los derechos reservados.</span>
+        <div class="footer__legal">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js" defer></script>
+  <script src="animations.js" defer></script>
+  <script src="testimonials.js" defer></script>
+  <script src="contact.js" defer></script>
+  <script src="assets/brand-enhancements.js" defer></script>
+</body>
+</html>

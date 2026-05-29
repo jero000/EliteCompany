@@ -1,0 +1,214 @@
+/* ============================================
+   ELITE COMPANY — Navegación
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 22px 0;
+  transition: background var(--dur-med) var(--ease),
+              padding var(--dur-med) var(--ease),
+              backdrop-filter var(--dur-med) var(--ease);
+}
+
+.nav.scrolled {
+  background: linear-gradient(180deg, rgba(11,11,13,0.72), rgba(11,11,13,0.6));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(199,168,75,0.06);
+  box-shadow: 0 6px 26px rgba(2,4,9,0.5);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 60px);
+}
+
+/* Logo */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav__logo-mark {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(199,168,75,0.08), transparent 40%);
+  border-radius: 8px;
+}
+
+.nav__logo-mark span {
+  transform: rotate(-45deg);
+}
+
+.nav__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav__logo-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.06em;
+}
+
+.nav__logo-sub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style: none;
+}
+
+.nav__links a {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width var(--dur-med) var(--ease-out);
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  color: var(--gold);
+}
+
+.nav__links a:hover::after,
+.nav__links a.active::after {
+  width: 100%;
+}
+
+/* CTA Nav */
+.nav__cta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid transparent;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(199,168,75,0.03), transparent);
+  transition: all var(--dur-med) var(--ease-out);
+}
+
+.nav__cta:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Hamburger */
+.nav__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.nav__hamburger span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--white);
+  transition: all var(--dur-med) var(--ease);
+  transform-origin: center;
+}
+
+.nav__hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* Mobile */
+.nav__mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav__links,
+  .nav__cta {
+    display: none;
+  }
+
+  .nav__hamburger { display: flex; }
+
+  .nav__mobile {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--dur-med) var(--ease);
+    z-index: 99;
+  }
+
+  .nav__mobile.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav__mobile a {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--white);
+    transition: color var(--dur-fast) var(--ease);
+  }
+
+  .nav__mobile a:hover { color: var(--gold); }
+}

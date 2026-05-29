@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b0b0d" />
+      <stop offset="100%" stop-color="#1b1c20" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <text x="80" y="220" font-family="Cormorant Garamond, serif" font-size="72" fill="#C7A84B">Elite Company</text>
+  <text x="80" y="300" font-family="DM Sans, sans-serif" font-size="36" fill="#F7F6F4">Soluciones Web & Community Manager</text>
+</svg>
