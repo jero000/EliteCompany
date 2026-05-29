@@ -1,0 +1,12 @@
+Ver qué cambió:
+git status
+
+Agregar todos los cambios:
+git add .
+
+Crear el commit:
+git commit -m "mensaje descriptivo"
+
+Subir al repositorio:
+git push origin main
+
